@@ -1,0 +1,33 @@
+{
+  "name": "food-ordering-app",
+  "version": "1.0.0",
+  "description": "This is clone of any Food ordering app",
+  "scripts": {
+    "start": "parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritik2602/Food_Ordering_App.git"
+  },
+  "keywords": [
+    "Header",
+    "Body",
+    "Footer"
+  ],
+  "author": "Ritik Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritik2602/Food_Ordering_App/issues"
+  },
+  "homepage": "https://github.com/ritik2602/Food_Ordering_App#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
