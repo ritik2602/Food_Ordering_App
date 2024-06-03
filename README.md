@@ -1,4 +1,4 @@
-# Food Ordering App's Clone basically the front end
+# Food Ordering App basically the front end
 
 # Components
 - Header
