@@ -1,7 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
-import { Link } from "react-router-dom";
 
 const Body = () => {
     // local state variable
@@ -21,6 +20,7 @@ const Body = () => {
             "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6290233&lng=77.4365501&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
         );
         const json=await data.json();
+        console.log(json);
         setlistofRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setfilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
@@ -56,11 +56,7 @@ const Body = () => {
                 {
                     filteredRestaurant.map(
                         (restaur)=>(
-                        <Link className="under"
-                            key={restaur.info.id} 
-                            to={"restaurant/"+restaur.info.id}>
-                            <RestaurantCard resData={restaur}/>
-                        </Link>
+                            <RestaurantCard key={restaur.info.id}  resData={restaur}/>
                 ))}
             </div>
         </div>

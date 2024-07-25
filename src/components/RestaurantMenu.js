@@ -16,20 +16,19 @@ const RestaurantMenu=()=>{
         setresInfo(json);
     }
     if(resInfo===null) return <Shimmer/>
-    const {name, cuisines} =resInfo;
-    const {itemCard} =resInfo;
+    const {name, cuisines, costForTwoMessage} =resInfo?.data?.cards[2]?.card?.card?.info;
+    const {itemCards} =resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
     return(
         <div className="menu">
-            <h1>Name of Rest</h1>
-            <h3></h3>
+            <h1>{name}</h1>
+            <h3>{cuisines.join(", ")+" -Rs. "+costForTwoMessage}</h3>
             <h2>Menu</h2>
             <ul>
-                {itemCard.map((item)=>{
-                    <li>Yes</li>
-                })}
-                <li>Biryani</li>
-                <li>Burger</li>
-                <li>Diet Coke</li>
+                {itemCards.map((item)=>(
+                    <li key={item.card.info.name}>
+                        {item.card.info.name} -{" Rs."}
+                        {item.card.info.price/100 || item.card.info.defaultPrice/100}</li>
+                ))}
             </ul>
         </div>
     )
