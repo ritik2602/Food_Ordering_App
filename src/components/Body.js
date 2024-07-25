@@ -16,11 +16,12 @@ const Body = () => {
 
     const fetchdata= async ()=>{
         const data=await fetch(
-            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6312471&lng=77.4372084&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+            // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6312471&lng=77.4372084&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6290233&lng=77.4365501&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
         );
         const json=await data.json();
-        setlistofRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setfilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setlistofRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setfilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
 
 //conditional rendering

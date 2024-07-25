@@ -28,6 +28,12 @@
     margin: 10px;
 }
 
+.under{
+    text-decoration: none;
+    color: black;
+}
+
+
 .filter{
     padding: 10px;
     display: flex;
@@ -39,10 +45,10 @@
 }
 
 .res-card{
-    margin: 5px;
-    padding: 5px;
+    margin: 10px;
+    padding: 6px;
     background-color: #f0f0f0;
-    width: 160px;
+    width: 180px;
 }
 
 .info *{
