@@ -33,6 +33,10 @@
     color: black;
 }
 
+.under-card{
+    text-decoration: none;
+    color: black;
+}
 
 .filter{
     padding: 10px;
