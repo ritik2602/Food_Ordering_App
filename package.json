@@ -1,8 +1,11 @@
 {
+  "homepage": "https://ritik2602.github.io/Food_Ordering_App",
   "name": "food-ordering-app",
   "version": "1.0.0",
   "description": "This is clone of any Food ordering app",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
@@ -21,9 +24,7 @@
   "bugs": {
     "url": "https://github.com/ritik2602/Food_Ordering_App/issues"
   },
-  "homepage": "https://github.com/ritik2602/Food_Ordering_App#readme",
   "devDependencies": {
-    "gh-pages": "^6.1.1",
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   },
